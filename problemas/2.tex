@@ -1,0 +1,150 @@
+\subsection{Averiguar si algún conjunto es semigrupo, monoide o grupo.}
+
+\begin{enumerate}
+    \item El conjunto de cadenas de símbolos (\textit{"string"}) con la concatenación como operación binaria.
+
+    \begin{enumerate}
+        \item Cumple con la propiedad asociativa:
+        \begin{equation}
+            (\text{"a"} + \text{"b"}) + \text{"c"} = \text{"a"} + (\text{"b"} + \text{"c"}) = \text{"abc"}
+        \end{equation}
+
+        \item El elemento neutro es la cadena vacía ($\text{""}$):
+        \begin{equation}
+            \text{"a"} + \text{""} = \text{"a"}
+        \end{equation}
+
+        \item No existe elemento inverso
+    \end{enumerate}
+
+    Por lo tanto, se trata de un monoide.
+
+    \item El conjunto $\{\text{Hija, Madre, Abuela}\}$ con la operación \textit{"La mayor de las dos"}.
+
+    \begin{enumerate}
+        \item Cumple con la propiedad asociativa, ya que el resultado siempre será el mayor de todos:
+        \begin{equation}
+            \begin{split}
+                & \text{Hija} * (\text{Madre} * \text{Abuela}) = \text{Hija} * \text{Abuela} = \text{Abuela} =\\
+                & (\text{Hija} * \text{Madre}) * \text{Abuela} = \text{Madre} * \text{Abuela} = \text{Abuela}
+            \end{split}
+        \end{equation}
+
+        \item El elemento neutro es $e = \text{Hija}$:
+        \begin{equation}
+            \text{Hija} * \text{Hija} = \text{Hija} \quad \text{Madre} * \text{Hija} = \text{Madre} \quad \text{Abuela} * \text{Hija} = \text{Abuela}
+        \end{equation}
+
+        \item No existe el elemento inverso.
+    \end{enumerate}
+    
+    Por lo tanto, se trata de un monoide.
+
+    \item El conjunto $\{\text{Giro de } 0^{\circ}, \text{Giro de } 120^{\circ}, \text{Giro de } 240^{\circ} \}$ con la composición de giros.
+
+    \begin{enumerate}
+        \item Cumple con la propiedad asociativa, ya que no importa que giro aplicar primero, al final saldrán los mismo grados.
+        \begin{equation}
+            (0^{\circ} * 120^{\circ} ) * 240^{\circ} = 120^{\circ} * 240^{\circ} = 0^{\circ} = 0^{\circ} * (120^{\circ} * 240^{\circ} ) = 0^{\circ} * 0^{\circ} = 0^{\circ}        
+        \end{equation}
+        \item El elemento neutro es el giro de 0 grados $e = 0^{\circ}$
+        \item Cada elemento tiene un inverso:
+        \begin{equation}
+            \begin{split}
+                & 0^{\circ} * 0^{\circ} = 0^{\circ} \implies (0^{\circ})^{-1} = 0^{\circ}\\
+                & 120^{\circ} * 240^{\circ} = 0^{\circ} \implies (120^{\circ})^{-1} = 240^{\circ}\\
+                & 240^{\circ} * 120^{\circ} = 0^{\circ} \implies (240^{\circ})^{-1} = 120^{\circ}     
+            \end{split}
+        \end{equation}
+    \end{enumerate}
+
+    Por lo tanto, se trata de un grupo.
+
+    \item Los enteros positivos pares con la operación suma.
+
+    \begin{enumerate}
+        \item Al tratarse de la suma de enteros, cumple la propiedad asociativa.
+        \item El neutro 0, no pertence al conjunto, por lo tanto no existe un neutro.
+    \end{enumerate}
+
+    Se trata de un semigrupo.
+
+    \item Los enteros positivos pares más el cero con la operación suma.
+
+    \begin{enumerate}
+        \item Al tratarse de la suma de enteros, cumple la propiedad asociativa.
+        \item El neutro es el 0, ya que se trata de la suma.
+        \item Al no tener negativos, el único elemento con inverso es el 0.
+    \end{enumerate}
+
+    Por lo tanto, se trata de un monoide.
+
+    \item $\mathbb{Q}$ con la suma.
+
+    \begin{enumerate}
+        \item Al tratarse de la suma de racionales, cumple la propiedad asocitativa.
+        \item El neutro es $0 \in \mathbb{Q}$, ya que se trata de la suma.
+        \item Cada elemento $a \in \mathbb{Q}$ tiene inverso $-a \in \mathbb{Q}$
+    \end{enumerate}
+
+    Por lo tanto, se trata de un grupo.
+
+    \item $\mathbb{Q}$ con la multiplicación.
+
+    \begin{enumerate}
+        \item Al tratarse del producto de racionales, cumple la propiedad asociativa.
+        \item El 1 es el elemento neutro.
+        \item Todos los elementos tienen inverso excepto el 0.
+    \end{enumerate}
+
+    Por lo tanto, se trata de un monoide. Para que fuese un grupo, habría que eliminar al 0 del conjunto.
+
+    \item $\mathbb{R}\setminus \{0\}$ con la división.
+
+    \begin{enumerate}
+        \item La división no cumple con la propiedad asociativa.
+    \end{enumerate}
+
+    Por lo tanto, no es ni semigrupo, ni monoide, ni grupo.
+
+    \item $\mathbb{Z}$ con la suma.
+
+    \begin{enumerate}
+        \item Al tratarse de la suma de enteros, cumple con la propiedad asociativa.
+        \item El 0 es el elemento neutro.
+        \item Cada elemento $a \in \mathbb{Z}$ tiene inverso $-a \in \mathbb{Z}$.
+    \end{enumerate}
+    
+    Por lo tanto, se trata de un grupo.
+
+    \item $\mathbb{R}\setminus \{0\}$ con la operación $a \cdot b = 3ab$
+    
+    \begin{enumerate}
+        \item Como en la operación solo intervienen productos, cumple con la propiedad asociativa.
+        \item El elemento inverso es $e=\frac{1}{3}$:
+            \begin{equation}
+                a \cdot \frac{1}{3} = 3a\cdot \frac{1}{3} = a
+            \end{equation}
+        \item El inverso de $a$ es $a^{-1} = \frac{1}{9a}$:
+            \begin{equation}
+                a \cdot \frac{1}{9a} = 3a \cdot \frac{1}{9a} = \frac{1}{3} = e
+            \end{equation}
+    \end{enumerate}
+
+    Por lo tanto, es un grupo.
+
+    \item $\mathbb{R}\setminus \{-1\}$ con la operación $a \cdot b = a + b + ab$
+    \begin{enumerate}
+        \item Como en la operación solo intervienen sumas y productos, cumple con la propiedad asociativa.
+        \item El elemento neutro es el 0:
+        \begin{equation}
+            a \cdot 0 = a + 0 + a\cdot 0 = a
+        \end{equation}
+        \item El inverso de $a$ es $a^{-1} = -\frac{a}{1+a}$:
+        \begin{equation}
+            a + a^{-1} + aa^{-1} = 0 \iff a^{-1}(1 + a) + a = 0 \iff a^{-1} = -\frac{a}{1+a}
+        \end{equation}
+    \end{enumerate}
+
+    Por lo tanto, se trata de un grupo.
+\end{enumerate}
