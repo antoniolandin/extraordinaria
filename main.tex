@@ -4,7 +4,7 @@
 \usepackage{fullpage}
 \usepackage{amsfonts}
 \usepackage{amsmath}
-\usepackage{amsthm}
+\usepackage{amsthm, thmtools, cleveref, etoolbox}
 \usepackage{amssymb}
 \usepackage{xparse}
 
@@ -12,11 +12,26 @@
 \setlength\parindent{0pt}
 \theoremstyle{plain}
 
-\newtheorem{thm}{Teorema}
-\newtheorem{lem}{Lema}
-\newtheorem{cor}[thm]{Colorario}
-\newtheorem{defi}{Definición}
-
+\makeatletter
+\newcommand{\HelperDeclareTheorem}[4]{%
+  \declaretheorem[
+    numberlike=subsection,
+    name=#3,
+    refname={#1, #2},
+    Refname={#3, #4},
+    postheadhook={%
+      \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection} #3 \ifdefempty{\thmt@optarg}{}{(\thmt@optarg)}}%
+    }
+  ]{%
+    #1%
+  }%
+}
+\makeatother
+\HelperDeclareTheorem{thm}{thms}{Teorema}{Teoremas}
+\HelperDeclareTheorem{lem}{lems}{Lema}{Lemas}
+\HelperDeclareTheorem{cor}{cors}{Colorario}{Colorarios}
+\HelperDeclareTheorem{defi}{defis}{Definición}{Definiciones}
+% Anotattion command
 \newcommand{\annoterel}[2]{%
   \overset{%
     \substack{\hidewidth\text{#1}\hidewidth\\\downarrow}%
