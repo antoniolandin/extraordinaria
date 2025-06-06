@@ -1,0 +1,15 @@
+\begin{thm}
+    Dado un grupo $G = \{X, \cdot\}$, si para todo $a,b \in G$ se cumple que $(a\cdot b)^2 = a^2 \cdot b^2$, entonces $G$ es abeliano
+    \begin{equation}
+        \forall a,b \in G: (a\cdot b)^2 = a^2 \cdot b^2 \implies \forall a,b \in G: a \cdot b = b \cdot a
+    \end{equation}
+\end{thm}
+
+\begin{proof}
+    \begin{equation}
+        \begin{split}
+        & (a \cdot b)^2 = a^2 \cdot b^2 \implies abab = aabb \iff a^{-1}(abab) = a^{-1}(aabb) \iff\\
+        & bab = abb \iff (bab)b^{-1} = (abb)b^{-1} \iff ba = ab  
+        \end{split}
+    \end{equation}
+\end{proof}

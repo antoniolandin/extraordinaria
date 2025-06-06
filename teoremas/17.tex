@@ -1,0 +1,18 @@
+\begin{thm}
+    Las clases laterales izquierdas $x_iH$ de un subgrupo $H$ normal, forman un grupo.
+\end{thm}
+
+\begin{proof}
+    Las clases laterales izquierdas de un subgrupo $H$ cumplen con las tres propiedades de los grupos:
+    \begin{enumerate}
+        \item La operación no se sale del conjunto y por tanto conserva la propiedad asociativa:
+            \begin{equation}
+                xH = Hx \implies \forall a \in xH : xH \cdot yH = xyHH = xyH \implies ab \in xyH
+            \end{equation}
+        \item El neutro pertenece a la clase lateral izquierda $eH$.
+        \item Todo elemento $a \in xH$ tiene inverso $a^{-1} \in (x^{-1})H$:
+            \begin{equation}
+                \forall a = xh_{1} \in xH \; \exists a^{-1} = (x^{-1})h_{2}  \in (x^{-1})H : h_{1}x \cdot (x^{-1})h_2 = h_{1}h_{2} \in eH \quad h_{1},h_{2} \in H
+            \end{equation}
+    \end{enumerate}
+\end{proof}

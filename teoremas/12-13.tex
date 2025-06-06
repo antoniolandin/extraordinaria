@@ -1,0 +1,26 @@
+\begin{thm}[Teorema de Lagrange]
+    \label{thm:lagrange}
+    El orden del grupo es múltipo del orden del subgrupo
+    \begin{equation}
+        H \subseteq G \implies |G| = |H| \cdot n \quad n \in \mathbb{N}
+    \end{equation}
+\end{thm}
+
+\begin{proof}
+    Dado un grupo $G$ con un subgrupo $H$ y con clases laterales $x_iH$, por el teorema \ref{thm:clases-laterales} sabemos que las clases laterales no tienen intersección. Como tienen que abarcar a todo el grupo $G$ y no tienen intersección, entonces necesariamente el orden de $G$ será múltiplo del orden de las clases laterales.
+    \begin{equation}
+        \sum_{i=1}^{\text{índice}} |x_iH| = |G| \implies |G| = |x_iH| \cdot n \quad n \in \mathbb{N}
+    \end{equation}
+    Las clases laterales $x_iH$ tienen el mismo orden que $H$, ya que se construyen operando $x_i$ con los elementos de $H$, entonces el orden de $G$ es múltiplo del orden de $H$.
+    \begin{equation}
+        |x_iH| = |H| \implies |G| = |H| \cdot n \quad n \in \mathbb{N}
+    \end{equation}
+\end{proof}
+
+\begin{cor}
+    El orden del grupo es múltiplo del orden de un elemento
+    \begin{equation}
+        x \in G: x^{k} = e \implies |G| = k \cdot n \quad n \in \mathbb{N}
+    \end{equation}
+    \label{cor:lagrange}
+\end{cor}

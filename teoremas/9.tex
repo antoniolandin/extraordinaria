@@ -1,0 +1,31 @@
+\begin{thm}
+    El centro de un grupo es un subgrupo y es normal.
+\end{thm}
+
+\begin{proof}
+    El centro $Z(G)$ es un subgrupo de $G$
+    \begin{enumerate}
+        \item El centro $Z(G)$, al mantener la operación de $G$, seguirá cumpliendo la propiedad asociativa.
+        \item El centro mantiene el neutro:
+        \begin{equation}
+            \forall x \in G: e \cdot x = x \cdot e \implies e \in Z(G)
+        \end{equation}
+    \item Si $x$ está en el centro entonces su inverso $x^{-1}$ también:
+        \begin{equation}
+            \begin{split}
+            & x \in Z(G) \implies \forall g \in G : g \cdot x^{-1} = x\cdot x^{-1}\cdot g\cdot x^{-1} =\\
+            & x^{-1} \cdot g \cdot x \cdot x^{-1} = x^{-1} \implies x^{-1} \in Z(G) 
+            \end{split}
+        \end{equation}
+    \end{enumerate}
+\end{proof}
+
+\begin{proof}
+    El centro $Z(G)$ es un subgrupo normal
+    \begin{equation}
+        \begin{split}
+            & \forall h \in Z(G), g \in G: g \cdot h \cdot g^{-1}  = g \cdot g^{-1} \cdot h = h \implies\\
+            & g H g^{-1} = H \implies Z(G) \text{ subgrupo normal}  
+        \end{split}
+    \end{equation}
+\end{proof}

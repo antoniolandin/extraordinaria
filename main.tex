@@ -1,0 +1,33 @@
+\documentclass[a4paper]{article}
+
+\usepackage[spanish]{babel}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{xparse}
+
+\allowdisplaybreaks
+\setlength\parindent{0pt}
+\theoremstyle{plain}
+
+\newtheorem{thm}{Teorema}
+\newtheorem{lem}{Lema}
+\newtheorem{cor}[thm]{Colorario}
+
+\newcommand{\annoterel}[2]{%
+  \overset{%
+    \substack{\hidewidth\text{#1}\hidewidth\\\downarrow}%
+  }{#2}%
+}
+
+\author{Antonio Cabrera Landín}
+\title{Extraordinaria Estructuras Algebraicas}
+\date{\today}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \include{teoremas}
+\end{document}

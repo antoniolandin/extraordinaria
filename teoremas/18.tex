@@ -1,0 +1,28 @@
+\begin{thm}
+    El conmutador es un subgrupo y es normal
+\end{thm}
+
+\begin{proof}
+    El conmutador $G' = \{<[a,b]> : a,b \in G\}$ es un subgrupo.
+    \begin{enumerate}
+        \item Como estamos operando elementos de $G$ con la misma operación, se seguirá conservando la propiedad asociativa.
+        \item El elemento neutro $[a,e] = e$ pertenece a $C$:
+            \begin{equation}
+                [a,e] = a\cdot e\cdot a^{-1} \cdot e^{-1} = a \cdot e \cdot a^{-1} \cdot e = a \cdot a^{-1} = e \implies e \in C \quad a,b \in G
+            \end{equation}
+        \item Todo elemento $x = [a,b]$ tiene inverso $x^{-1} = [b,a]$
+            \begin{equation}
+                \begin{split}
+                    & \forall x = [a,b] = aba^{-1}b^{-1} \in C \exists x^{-1} = [b,a] = bab^{-1}a^{-1} \in C : x \cdot x^{-1} =\\
+                    & aba^{-1}b^{-1} \cdot bab^{-1}a^{-1} = aba^{-1}ab^{-1}a^{-1} = abb^{-1}a^{-1} = aa^{-1} = e\\   
+                \end{split}
+            \end{equation}
+    \end{enumerate}
+\end{proof}
+
+\begin{proof}
+    El conmutador $C = <[a,b]>$ es un subgrupo normal.
+    \begin{equation}
+        \forall h \in G' : aha^{-1} = aha^{-1}h^{-1}h = [a, h] \cdot h \in G' \implies g(G')g = G'
+    \end{equation}
+\end{proof}

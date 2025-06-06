@@ -1,0 +1,32 @@
+\begin{lem}
+    Dado un grupo $G = \{X, \cdot\}$, para cada pareja $a,b \in G$ se cumple que $(a\cdot b)^{-1}=b^{-1}a^{-1}$
+    \label{lem:inverso}
+\end{lem}
+
+\begin{proof}
+    \begin{equation}
+        \begin{split}
+            & (a \cdot b)^{-1} (a \cdot b) = e \iff (a\cdot b)^{-1}(a\cdot b)\cdot b^{-1} = e \cdot b^{-1} \iff\\
+            & (a\cdot b)^{-1}a = b^{-1} \iff (a\cdot b)^{-1}a\cdot a^{-1} = b^{-1}a^{-1} \iff\\
+            & (a\cdot b)^{-1} = b^{-1} a^{-1}
+        \end{split}
+    \end{equation}
+\end{proof}
+
+\begin{thm}
+    Dado un grupo $G = \{X, \cdot\}$, para cada pareja $a,b \in G$ el orden de $ab$ es el mismo que el de $ba$
+    \begin{equation}
+        \forall a,b \in G: (a\cdot b)^{k} = e \iff (b \cdot a)^{k} = e  
+    \end{equation}
+\end{thm}
+
+\begin{proof}
+    \begin{equation}
+        \begin{split}
+        & (ab)^{k} = ab\cdot ab\cdots ab = a \cdot (ba \cdots ba) \cdot b = a \cdot (ba)^{k-1} \cdot b = e \iff\\
+        & a^{-1}\cdot a\cdot (ba)^{k-1}\cdot b = a^{-1} \iff (ba)^{k-1}\cdot b = a^{-1} \iff\\
+        & (ba)^{k-1}\cdot b \cdot b^{-1}  = a^{-1}b^{-1} \iff (ba)^{k-1} = a^{-1}b^{-1} \annoterel{\text{lema} \ref{lem:inverso}}{=} (ba)^{-1} \iff\\
+        & (ba)^{k-1}(ba) = (ba)^{-1}(ba) \iff (ba)^{k} = e   
+        \end{split}
+    \end{equation}
+\end{proof}

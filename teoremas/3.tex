@@ -1,0 +1,19 @@
+\begin{thm}
+    Dado un grupo $G = \{X, \cdot \}$, si para cualquier elemento $a \in G$ se cumple que $a \cdot a = e$, entonces $G$ es abeliano.
+    \begin{equation}
+        \forall a \in G : a\cdot a = e \implies \forall a,b \in G : a \cdot b = b \cdot a
+    \end{equation}
+\end{thm}
+
+\begin{proof}
+    \begin{equation}
+        a \cdot b \in G \implies (ab)^2 = ab\cdot ab = e
+    \end{equation}
+
+    \begin{equation}
+        \begin{split}
+            & aabb = e \cdot e = e = (ab)^2 \implies a^{-1}(aabb) = a^{-1}(abab) \iff\\
+            & abb = bab \iff (abb)b^{-1} = (bab)b^{-1} \iff ab = ba 
+        \end{split}
+    \end{equation}
+\end{proof}

@@ -1,0 +1,31 @@
+\begin{lem}
+    Si $a \in xH$ entonces $xH = aH$
+\end{lem}
+
+\begin{proof}
+    \begin{equation}
+        a \in xH \implies \exists h \in H : a = xh \iff aH = xhH \implies aH = xH
+    \end{equation}
+    \label{lem:clases-laterales}
+\end{proof}
+
+\begin{thm}
+    Las clases laterales izquierdas o coinciden o no tienen intersección.
+    \label{thm:clases-laterales}
+\end{thm}
+
+
+\begin{proof}
+    Dado un grupo $G=\{X, \cdot\}$ con un subgrupo $H \subseteq G$.
+    Supongamos que $\exists a \in xH$ que además $a \in yH$, entonces:
+    \begin{equation}
+        \begin{split}
+        & \begin{cases}
+            a \in xH \implies \exists h_{1} \in H : a = xh_{1}\\
+            a \in yH \implies \exists h_{2} \in H : a = yh_{2}
+        \end{cases} \implies xh_{1} = yh_{2} \iff\\
+        & xh_{1}\cdot h_{1}^{-1} = yh_{2}h_1^{-1} \iff x = yh_{2}h_{1}^{-1} = yh_{3}, \; h_{3} \in H \implies x \in yH
+        \end{split}
+    \end{equation}
+    Utilizando el lema $\ref{lem:clases-laterales}$, sabemos que $x \in yH \implies xH = yH$.
+\end{proof}

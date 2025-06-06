@@ -1,0 +1,10 @@
+\begin{thm}
+    Cualquier grupo de orden primo es cíclico
+    \begin{equation}
+        |G| = p \text{ primo} \implies \exists x \in G : x^{p} = e 
+    \end{equation}
+\end{thm}
+
+\begin{proof}
+    Por el colorario \ref{cor:lagrange} sabemos que el orden del grupo tiene que ser múltiplo del orden de los elementos. Como el orden del grupo es primo, los elementos solo pueden tener orden $1$ u orden $p$. Por el teorema \ref{thm:neutro}, el único elemento de orden 1 es el neutro, entonces el resto de elementos del grupo tienen orden $p$. Como existe al menos un elemento de orden $p$, el grupo es cíclico.
+\end{proof}

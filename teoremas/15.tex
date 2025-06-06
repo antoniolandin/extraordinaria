@@ -1,0 +1,21 @@
+\begin{thm}
+    Si $H \subset G$ es un subgrupo, entonces $gHg^{-1}$, con $g \in G$, también lo es.
+    \begin{equation}
+        H \subset G \implies gHg^{-1} \subset G \quad g \in G 
+    \end{equation}
+\end{thm}
+
+\begin{proof}
+    $gHg^{-1}$ cumple con las tres propiedades del los subgrupos:
+    \begin{enumerate}
+        \item $gHg^{-1}$ seguirá manteniendo la propiedad asociativa ya que solo hemos operado los elementos de $H$ con elementos de $G$.
+        \item El elemento neutro $e\in G$ está en $gHg^{-1}$:
+        \begin{equation}
+            e \in H \implies g \cdot e \cdot g^{-1} = g \cdot g^{-1} = e \implies e \in gHg^{-1}
+        \end{equation}
+    \item Cada elemento $x = ghg^{-1} \in gHg^{-1}$ tiene inverso $x^{-1}$:
+        \begin{equation}
+            ghg^{-1} \cdot g(h^{-1})g^{-1}    = gh (h^{-1})g^{-1} \cdot g^{-1} = g g^{-1} = e \implies g(h^{-1})g = x^{-1} \in gHg^{-1}       
+        \end{equation}
+    \end{enumerate}
+\end{proof}
