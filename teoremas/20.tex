@@ -1,3 +1,23 @@
 \begin{thm}
     La imagen de un homomorfismo es un subgrupo.
 \end{thm}
+
+\begin{proof}
+    La operación está contenida en $\text{Im} f$:
+    \begin{equation}
+        f(a) \cdot f(b) = f(a\cdot b) \in \text{Im} f
+    \end{equation}
+
+    \begin{enumerate}
+        \item Como se conserva la operación, se sigue conservando la propiedad asociativa.
+        \item Como $f(e) = e$, el neutro pertenece a $\text{Im} f$.
+        \begin{equation}
+            f(e) = e \implies e \in \text{Im} f
+        \end{equation}
+        \item Si $x = f(a) \in \text{Im} f$, entonces $x^{-1} = f(a^{-1})$:
+        \begin{equation}
+            x \cdot x^{-1} = f(a) \cdot f(a^{-1}) = f(a\cdot a^{-1}) = f(e) = e
+        \end{equation}
+    \end{enumerate}
+\end{proof}
+

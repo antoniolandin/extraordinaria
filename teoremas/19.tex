@@ -1,3 +1,32 @@
 \begin{thm}
     El núcleo de un homomorfismo es un subgrupo y es normal.
 \end{thm}
+
+\begin{proof}
+    La operación está contenida en $\text{Ker}f$:
+    \begin{equation}
+        \forall a,b \in \text{Ker} f: f(a\cdot b) = f(a) \cdot f(b) = e \cdot e = e \implies a\cdot b \in \text{Ker} f
+    \end{equation}
+
+    \begin{enumerate}
+        \item El subgrupo del nucleo al mantener la operación, sigue manteniendo también la propiedad asociativa.
+        \item El neutro pertenece al nucleo:
+        \begin{equation}
+            f(e) = e \implies e \in \text{Ker} f
+        \end{equation}
+        \item Si $x \in \text{Ker} f$ entonces su inverso también.
+        \begin{equation}
+            \begin{split}
+                & x \in \text{Ker} f : f(e) = e \implies f(x \cdot x^{-1}) = e \implies f(x) \cdot f(x^{-1}) = e \implies\\
+                & e \cdot f(x^{-1}) = e \implies f(x^{-1}) = e \implies x^{-1} \in \text{Ker} f 
+            \end{split}
+        \end{equation}
+    \end{enumerate}
+
+    Por lo tanto, el nucleo es un homomorfismo.
+
+    Además, es normal ya si llamamos $H = \text{Ker} f$ que se cumple que $\forall g \in G: g H g^{-1} = H$.
+    \begin{equation}
+        f(gHg^{-1}) = f(g) \cdot f(H) \cdot f(g^{-1}) = f(g) \cdot f(g^{-1}) = f(g) \cdot f^{-1}(g) = e \implies g H g^{-1} = H  
+    \end{equation}
+\end{proof}
