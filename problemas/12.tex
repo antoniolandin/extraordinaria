@@ -1,1 +1,57 @@
 \subsection{Comprobar que un grupo es soluble o demostrar que no lo es.}
+
+\begin{enumerate}
+    \item $\mathbb{Z}_n$
+
+    $\mathbb{Z}_n' = e$, ya que como $\mathbb{Z}_n$ es abeliano entonces $aba^{-1}b^{-1}=aa^{-1}bb^{-1} = e\cdot e = e$. Por lo tanto, es soluble.
+    \begin{equation}
+        \mathbb{Z}_{n} \to \{e\}
+    \end{equation}
+
+    \item $S_3$
+
+    Como el conmutador se forma con $aba^{-1}b^{-1}$, entonces para todos los grupos de permutación $S_n$ el conmutador serán las permutaciones pares. En el caso de $S_3$, los únicos ciclos pares son $(1\;2\;3)$ y $(1\;3\;2)$.
+    \begin{equation}
+        S_{3}' = A_{3} = \{(1\;2\;3), (1\;3\;2), e\} \cong \mathbb{Z}_{3}
+    \end{equation}
+
+    $A_{3} \cong \mathbb{Z}_{3}$, ya que el único grupo de 3 elementos es $\mathbb{Z}_{3}$. Por lo tanto, el conmutador de $A_{3}' = e$. Como resultado, $S_{3}$ es soluble.
+    \begin{equation}
+        S_{3} \to A_{3} \cong \mathbb{Z}_{3} \to \{e\}
+    \end{equation}
+
+    \item $\Delta_{4}$
+
+    Como $4$ es par, sabemos que el conmutador de $\Delta_{4}$ es isomorfo a $\mathbb{Z}_{2}$.
+    \begin{equation}
+        \Delta_{4}' \cong \mathbb{Z}_{2}
+    \end{equation}
+
+    Como el conmutador de $\mathbb{Z}_{2}$ es trivial, el grupo $\Delta_{4}$ es soluble.
+    \begin{equation}
+        \Delta_{4} \to \mathbb{Z}_{2} \to \{e\}
+    \end{equation}
+
+    \item $A_{4}$
+
+    El conmutador de $A_{4}$ es isomorfo a $V_{4}$, y como este es abeliano su conmutador es trivial. Entonces, $A_{4}$ es soluble.
+    \begin{equation}
+        A_{4} \to V_{4} \to \{e\}
+    \end{equation}
+
+    \item $S_{4}$
+
+    El conmutador de $S_{4}$ es $A_{4}$, por lo tanto es soluble.
+    \begin{equation}
+        S_{4} \to A_{4} \to V_{4} \to \{e\}
+    \end{equation}
+
+    \item $A_5$
+
+    A partir de $n\ge 5$, $A_{n}$ es simple, lo que significa que no contiene subgrupos normales no triviales, pero el conmutador debe ser normal. Tenemos dos opciones, o el conmutador es trivial o el conmutador es el propio grupo alternante. El conmutador solo es trivial si solo si el grupo es abeliano. Como $A_{5}$ no es abeliano, entonces el conmutador de $A_{5}$ es el mismo.
+    \begin{equation}
+        A_{5}' = A_{5}
+    \end{equation}
+
+    Entonces el grupo no es soluble, ya que no existirá ninguna cadena de conmutadores que nos lleve al grupo trivial.
+\end{enumerate}
