@@ -1,0 +1,22 @@
+\begin{thm}
+    Todo cuerpo es dominio de integridad
+    \begin{equation}
+        G \text{ cuerpo} \implies G \text{ D.I.}
+    \end{equation}
+\end{thm}
+
+\begin{proof}
+    Supongamos que $G$ es un cuerpo pero que no es un dominio de integridad.
+
+    Entonces como $G$ no es un dominio de integridad se cumple que:
+    \begin{equation}
+        \exists a, b \in G : ab = 0 \quad a,b \neq 0
+    \end{equation}
+
+    Como $G$ es un cuerpo todos sus elementos menos el $0$ tienen inverso multiplicativo, por lo tanto:
+    \begin{equation}
+        ab \cdot b^{-1}a^{-1} = 1 \implies 0 \cdot (ab)^{-1} = 1 
+    \end{equation}
+
+    Pero el inverso aditivo no puede tener inverso multiplicativo ya que $G$ es un cuerpo. Contradicción.
+\end{proof}

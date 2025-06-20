@@ -1,3 +1,70 @@
 \begin{thm}[Teorema de Caley]
     Todo grupo $G$ es isomorfo a un subgrupo de las biyecciones de $G$, $B(G)$, que es el grupo simétrico.
 \end{thm}
+
+\begin{proof}
+    Consideremos las acciones de un elemento $\varphi_g(x) = gx$. Primero demostraremos que son biyectivas:
+    
+    \begin{itemize}
+        \item Las acciones de un elemento son inyectivas ya que si consideramos $x \neq y$ entonces:
+            \begin{equation}
+                \begin{cases}
+                    \varphi_g(x) = gx\\
+                    \varphi_g(y) = gy
+                \end{cases} 
+            \end{equation}
+
+            Por lo tanto:
+            \begin{equation}
+                x \neq y \implies gx \neq gy \implies \varphi_g(x) \neq \varphi_g(y)
+            \end{equation}
+
+        \item Las acciones son sobreyectivas ya que para cualquier imágen $x \in \text{Im}f$ existe la preimagen $g^{-1}x$:
+            \begin{equation}
+                \varphi(g^{-1}x) = gg^{-1}x = x \in \text{Im}f 
+            \end{equation}
+
+            Por lo tanto como las acciones de un elemento son sobreyectivas e inyectivas, son también biyectivas.
+    \end{itemize}
+
+    A continuación, demostraremos las biyecciones de $G$, $B(G)$, es un grupo:
+
+    \begin{itemize}
+        \item Está correctamente definido:
+
+            $\varphi_a \circ \varphi_b(x) = \varphi_a(\varphi_b(x))=\varphi_a(bx) = abx \implies \varphi_a \circ \varphi_b = \varphi_{ab}$
+        \item Como la operación es la composición de funciones, cumple con la propiedad asociativa.
+
+        \item El neutro es $\varphi_e \in B(G)$:
+        \begin{equation}
+            \varphi_{a} \circ \varphi_{e} = \varphi_{a \cdot e} = \varphi_{a}
+        \end{equation}
+
+        \item El inverso de $\varphi_a \in B(G)$ es $\varphi_{a^{-1}} \in B(G)$:
+        \begin{equation}
+            \varphi_a \circ \varphi_{a^{-1}} = \varphi_{a \cdot a^{-1}} = \varphi_e
+        \end{equation}
+    \end{itemize}
+    
+    Ahora falta demostrar que es isomorfo al grupo original.
+    \begin{equation}
+        G \cong B(G)
+    \end{equation}
+
+    Consideremos el morfismo $f:G \to B(G)$ tal que $f(g) = \varphi_g$. Demostraremos primero que se trata de un homomorfismo:
+    \begin{equation}
+        f(a \cdot b) = \varphi_{ab} = \varphi_a \circ \varphi_b \impliedby \varphi_a(\varphi_b(x)) = \varphi_a(bx) = abx = \varphi_{ab}(x)
+    \end{equation}
+
+    Por último, demostraremos que este homomorfismo es biyectivo:
+
+    \begin{itemize}
+        \item El homomorfismo es inyectivo: Supongamos $a,b \in G : a\neq b$:
+            \begin{equation}
+                a \neq b \implies \forall x \in G: ax \neq bx \iff \varphi_a(x) \neq \varphi_b(x) \iff \varphi_a \neq \varphi_b
+            \end{equation}
+        \item El homomorfismo es suprayectivo, ya que para cada imagen $\varphi_a \in B(G)$ existe la preimagen $a \in G$.
+    \end{itemize}
+
+    Como el homomorfismo es biyectivo, hemos encontrador un isomorfismo de $G$ a $B(G)$, por lo tanto, cualquier grupo $G$ es isomorfo a un subgrupo de las biyecciones $B(G)$.
+\end{proof}

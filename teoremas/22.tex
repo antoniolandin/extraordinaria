@@ -1,3 +1,37 @@
 \begin{thm}[Pimer teorema de isomorfía]
-    
+    Sea $f:G \to G'$ un homomorfismo. Entonces podemos establecer el isomorfismo $\bar{f}:G / \text{Ker} f \to G' \cong \text{Im}(f)$   
 \end{thm}
+
+\begin{proof}
+    Renombremos $\text{Ker} f=H$. Conocemos el homorfismo cańonico $\pi : G \to G / H$ $\phi(g) = gH$. El inverso será $\pi_{-1} (gH) = g$ tal que $\pi^{-1}: G / H \to G$. Entonces:
+    \begin{equation}
+        \pi^{-1}(gH) = g \iff f(\pi^{-1}(gH)) = f(g)
+    \end{equation}
+
+    Si a $f \circ \pi^{-1} = \bar{f}$, entonces:
+    \begin{equation}
+        f(\pi^{-1}(gH)) = f(g) \implies \bar{f}(gH) = f(g) \quad \bar{f}: G / H \to G'
+    \end{equation}
+
+    Primero demostremos que es un homomorfismo:
+    \begin{equation}
+        \bar{f} (aH \cdot bH) = \bar{f} (abHH) = \bar{f}(abH) = f(ab) = f(a) \cdot f(b)
+    \end{equation}
+
+    Ahora que es un isomorfismo:
+    \begin{itemize}
+        \item $\bar{f}$ es sobreyectiva ya que para cualquier imagen $f(a)$ existe la preimagen $aH$.
+        \item $\bar{f}$ es inyectiva:
+
+            Queremos demostrar que $aH \neq bH \implies f(a) \neq f(b)$, podemos demostrar que $\neg \bar{f}(aH) \neq \bar{f}(bH) \implies \neg aH \neq bH$, es decir, que $\bar{f}(aH) = \bar{f}(bH) \implies aH = bH$.
+        \begin{equation}
+            \begin{split}
+                & \bar{f}(aH) = \bar{f}(bH) \iff f(a) = f(b) \iff f(a) \cdot f(b^{-1}) = f(b) \cdot f(b^{-1}) \iff\\
+                & f(ab^{-1}) = f(bb^{-1}) = f(e) = e \implies ab^{-1} \in H \implies ab^{-1}H = H \iff\\
+                & ab^{-1}H\cdot b = H\cdot b \iff ab^{-1}bH = Hb \iff aH = Hb = bH \iff aH = bH   
+            \end{split}
+        \end{equation}
+    \end{itemize}
+
+    Por lo tanto, hemos encontrado un isomorfismo $\bar{f}: G / \text{Ker} f \to G' \cong \text{Im} f$.
+\end{proof}

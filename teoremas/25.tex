@@ -1,0 +1,25 @@
+\begin{thm}
+    Todos los ideales en $\mathbb{Z}$ son principales.
+\end{thm}
+
+\begin{proof}
+    Si el ideal es el trivial entonces ya es principal.
+
+    Como los ideales contienen a los inversos aditivos $-a$ de los elementos $a\neq 0$, hablaremos siempre de números positivos.
+
+    Consideremos $m$ como el elemento más pequeño del ideal:
+
+    si $m=1$ el ideal coincide con todo $\mathbb{Z}$ y por lo tanto ya es principal.
+
+    En caso contrario $m\neq 1$, si el ideal no fuese principal, entonces el resto de elementos no serían múltiplos de $m$:
+    \begin{equation}
+        i \in I: m \mid i \implies i = mk + r \quad r < m \implies r = i - mk
+    \end{equation}
+
+    Pero por definición de ideal, como $k \in \mathbb{Z}$, entonces $mk \in I$. Como $I$ es un subgrupo de $\mathbb{Z}$:
+    \begin{equation}
+        i - mk \in I \implies r \in I
+    \end{equation}
+
+    Contradicción. Hemos encontrado un elemento $r \in I$ más pequeño que $m$ cuando hemos dicho que $m$ era el más pequeño. Por lo tanto, hemos demostrado por reducción al absurdo que todos los ideales en $\mathbb{Z}$ son principales.
+\end{proof}

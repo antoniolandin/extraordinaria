@@ -1,3 +1,14 @@
 \begin{thm}
     $\mathbb{Z}_n$ tiene $\varphi(n)$ generadores
 \end{thm} 
+
+\begin{proof}
+    Sea $g \in \mathbb{Z}_{n}$ y $n = |G|$ entonces:
+    \begin{equation}
+        \text{m.c.m.}(g,n) = \frac{gn}{\text{m.c.d.}(g,n)} = k\cdot g = l \cdot n \equiv 0 \mod n \implies \frac{gn}{\text{m.c.d.}(g,n)} = k\cdot g \iff k = \frac{n}{\text{m.c.d.}(g,n)}
+    \end{equation}
+
+    Sabemos que este $k$ es el orden de $g$ ya que como $g\cdot k = n \cdot l \equiv 0 \mod n$ y además como es el mínimo común múltiplo será el primero en ser cero. Por lo tanto, $g$ será un generador cuando $k=n$ y esto solo ocurre cuando el $\text{m.c.d.}(g,n) = 1$, es decir, cuando $g$ es coprimo con $n$.
+
+    Como $\varphi(n)$ mide el número de números coprimos menores que $n$, además será el número de generadores en $\mathbb{Z}_{n}$
+\end{proof}

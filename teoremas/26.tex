@@ -1,0 +1,21 @@
+\begin{thm}
+    En un anillo conmutativo $A$ con un ideal $I$, el anillo cociente $A / I$ es D.I. si y solo si $I$ es un ideal primo.
+\end{thm}
+
+\begin{proof}
+    $\implies$
+    \begin{equation}
+        \begin{split}
+            & (a+I)(b+I) = ab + I = e + I \implies ab \in I\\
+            & A / I \text{ D.I} \implies ab \in I \implies (a + I)(b + I) = ab + I = I \implies\\
+            & a + I = I \text{ o } b + I = I \implies a \in I \text{ o } b \in I
+        \end{split}
+    \end{equation}
+    $\impliedby$
+    \begin{equation}
+        \begin{split}
+            & I \text{ primo} : ab \in I \implies a \in I \text{ o } b \in I \iff a \not\in I \text{ y } b \not\in I \implies ab \not\in I \implies\\
+            & \forall (a + I) \neq I, (b + I) \neq I : ab + I = (a +I)(b + I) \neq I \implies A / I \text{ D.I.}
+        \end{split}
+    \end{equation}    
+\end{proof}
