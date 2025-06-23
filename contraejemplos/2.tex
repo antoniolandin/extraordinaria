@@ -1,0 +1,30 @@
+\begin{ce}
+    La imagen y el núcleo de un homomorfismo de anillos son ideales.
+\end{ce}
+
+\begin{proof}
+    Es cierto que el núcleo es siempre un ideal, pero la imagen solo si se trata de un homomorfismo suprayectivo. Si consideramos por ejemplo el homomorfismo $f:\mathbb{R} \to M_{2}(\mathbb{R})$ tal que:
+    \begin{equation}
+        f(x) = \begin{pmatrix}
+            x & 0\\
+            0 & 0
+        \end{pmatrix} 
+    \end{equation}
+
+    Entonces $\text{Im} f$ ya no es un ideal ya que la multiplicación de un elemento de $M_{2}(\mathbb{R})$ con la imágen se puede salir de $\text{Im} f$:
+    \begin{equation}
+        \begin{pmatrix}
+            x & 0\\
+            0 & 0
+        \end{pmatrix} 
+        \cdot
+        \begin{pmatrix}
+            1 & 1\\
+            0 & 0
+        \end{pmatrix} =
+        \begin{pmatrix} 
+            x & x\\
+            0 & 0
+        \end{pmatrix} \not\in \text{Im}f
+    \end{equation}
+\end{proof}
