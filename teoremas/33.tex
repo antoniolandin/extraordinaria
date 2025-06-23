@@ -1,0 +1,15 @@
+\begin{thm}
+    Todos los ideales en un anillo de polinomios con coeficientes en un cuerpo son principales.
+    \label{thm:polinomio-cuerpo-ideales-principales}
+\end{thm}
+
+\begin{proof}
+    Consideremos en un anillo con coeficientes en un cuerpo $C[x]$ el ideal $I \subset C[x]$ y su polinomio de menor grado $P(x) \in I$. Supongamos por reducción al absurdo que el ideal $I$ no es principal, es decir que existe un polinomio $E(x)$ de mayor grado que no sea múltiplo de $P(x)$, entonces:
+    \begin{equation}
+        E(x) = P(x)Q(x) + R(x)
+    \end{equation}
+
+    Pero $R(x)$ tiene menor grado que $P(x)$, contradicción.
+
+    Esto solo ocurre en cuerpos ya que en no cuerpos $C[x, 2]$ sería ideal, pero no sería principal.
+\end{proof}

@@ -1,0 +1,20 @@
+\begin{thm}[Kronecker]
+    Cualquier polinomio tiene raíz en algún cuerpo.
+\end{thm}
+
+\begin{proof}
+    Sea $P(x)$ un polinomio irreducible con coeficientes en un cuerpo $C$, consideremos el cuerpo cociente $C_{P(x)} = C[x] / <P(x)>$.
+
+    Por el teorema \ref{thm:polinomio-cuerpo-ideales-principales}, el ideal $<P(x)>$ es principal ya que todos los ideales en un anilo de polinomios con coeficientes en un cuerpo son principales.
+
+    Además $<P(x)>$ es D.I. ya que no existen dos polinomios $A(x)B(x)$ que multiplicados den cero. Por lo tanto, al ser $D.I.P.$, el ideal $<P(x)>$ es además maximal, y por lo tanto, por el teorema \ref{thm:maximal-cuerpo}, sabemos que $C[x] / <P(x)>$ es un cuerpo.
+
+    Si ahora consideramos la extensión de este cuerpo $C_{P(x)}[x]$, entonces $x + <P(x)>$ siempre será raíz de $P(x)$:
+    \begin{equation}
+        \begin{split}
+            & P(x + <P(x)>) = a_{0} + a_{1}(x + <P(x)>) + a_{2}(x + <P(x)>)^2 + \ldots + a_{n}(x + <P(x)>)^{n} =\\
+            & a_{0} + a_{1}(x + <P(x)>) + a_2(x^2 + <P(x)>) + \ldots + a_{n}(x^{n} + <P(x)>) =\\
+            & a_{0} + a_{1}x + a_{2}x^2 + \ldots + a_{n}x^{n} + <P(x)> = P(x) + <P(x)> = 0 + <P(x)> 
+        \end{split}
+    \end{equation}
+\end{proof}

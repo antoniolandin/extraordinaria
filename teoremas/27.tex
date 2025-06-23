@@ -1,0 +1,50 @@
+\begin{thm}
+    En un anillo conmutativo unitario $R$; el ideal $M$ es maximal si y sólo si el anillo cociente $R/M$ es un cuerpo.
+    \label{thm:maximal-cuerpo}
+\end{thm}
+
+\begin{proof}
+    $\implies$
+    
+    Consideremos el elemento $a+M \in R / M$. Si $a \in M$ entonces $a + M = M$, por lo que no puede tener inverso multiplicativo ya que $(a+M)(b+M) = M(b+M) = Mb + M = M + M = M$
+
+    Si $a \not\in M$ entonces podemos construir el ideal $I = \{ra + m : r \in R, \; m \in M\}$.
+
+    Primero demostraremos que es subanillo viendo que está correctamente definido:
+    \begin{equation}
+        \begin{split}
+            & (ra+m)+(r'a+m') = (r+r')a + (m+m') = r''a + m''\\
+            & (ra+m) \cdot (r'a+m') = rr'a^2 + rm'a + r'ma + mm' = (rr'a + rm' + r'm)a + (mm') = r''a + m''
+        \end{split}
+    \end{equation}
+
+    Ahora veremos que $I$ es un ideal ya que como $M$ lo es, entocnes $r'm = m'$:
+    \begin{equation}
+        (ra + m) \cdot r' = (rr')a + r'm = r''a + m'
+    \end{equation}
+
+    $M \subseteq I$, pero $M$ maximal, entonces $I = R$.
+    
+    Como $R$ es unitario, entonces $1 \in R \iff 1 \in I$, por lo que:
+    \begin{equation}
+        \exists r \in R, \; m \in M: ra + m = 1
+    \end{equation}
+
+    Entonces podemos sustituir:
+    \begin{equation}
+        1 + M = ra + m + M = (a + M)(r + M) \implies (a + M)^{-1} = (r + M) 
+    \end{equation}
+
+    Por lo tanto, $R / M$ es un cuerpo.
+
+    $\impliedby$
+
+    Tenemos a $M$ ideal, supongamos por reducción al absurdo que existe $M \subseteq I$ ($M$ no maximal).
+
+    Consideremos $a + M \in R / M$ con $a \in I, \; a \not\in M$. Como $R / M$ es un cuerpo, entonces tendrá inverso (ya que no se trata del neutro $M$):
+    \begin{equation}
+        (a + M)(b + M) = 1 + M \iff ab + M = 1 + M \iff ab = 1 \implies 1 \in I
+    \end{equation}
+
+    Como $1 \in I$, entonces por el teorema \ref{thm:ideal-neutro-multiplicativo} sabemos que $I = R$. Por lo tanto, $M$ es maximal.
+\end{proof}

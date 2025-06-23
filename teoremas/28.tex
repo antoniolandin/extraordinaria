@@ -1,0 +1,13 @@
+\begin{cor}
+    En un anillo conmutativo unitario. Todos los ideales maximales son primos.
+\end{cor}
+
+\begin{proof}
+    Sea $R$ un anillo conmutativo unitario. Primero, por el teorema \ref{thm:maximal-cuerpo} sabemos que si $M$ es maximal entonces $R / M$ es un cuerpo (ya que $R$ es conmutativo y unitario). Por el teorema \ref{thm:cuerpo-di} sabemos que todo cuerpo es dominio de integridad, por lo que si $R / M$ es maximal, entonces será cuerpo y además será D.I. Utilizando el teorema \ref{thm:di-primo} sabemos que si $R / M$ es maximal y por tanto cuerpo y D.I., entonces necesariamente es primo (ya que $R$ es conmutativo).
+    \begin{equation}
+        \begin{split}
+        & M \text{ maximal} \iff R / M \text{ cuerpo} \implies R / M \text{ D.I.} \iff M \text{ primo}\\
+        & M \text{ maximal} \implies M \text{ primo}
+        \end{split}
+    \end{equation}
+\end{proof}
